@@ -13,7 +13,7 @@ const Cv = () => {
         <>
         <Title />
         <LoadingText />
-        <DynamicContainer estado="0" nombre="Summary" />
+        <DynamicContainer estado="1" nombre="Summary" />
         <DynamicContainer estado="0" nombre="Competencies" />
         <DynamicContainer estado="0" nombre="Experience" />
         <DynamicContainer estado="0" nombre="Education" />
