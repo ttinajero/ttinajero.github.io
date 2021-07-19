@@ -10,7 +10,7 @@ const LoadingText = () => {
             <Col span={24}>
                 <div style={{textAlign: 'left', padding: '0px 0px 0px 40px', fontSize:20, fontFamily: 'Ubuntu'}}>
                     <Typing speed={50}>
-                        <span>Cargando datos personales...</span>
+                        <span>Cargando competencias...</span>
                         <Typing.Reset count={1} delay={500} />
                         <span>Cargando experiencia laboral...</span>
                         <Typing.Reset count={1} delay={500} />
