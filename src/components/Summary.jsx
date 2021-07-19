@@ -14,7 +14,7 @@ function Summary() {
                         ability to effectively develop, manage and control the requirements that the company needs. I like challenging projects and being able to work under pressure.
                         <br/><br/>
                         <div style={{textAlign: 'center'}}>
-                            <FaKeyboard size={25} style={{ fill: '#bcdae9'}}/>  <FaLaptop size={25} style={{ fill: '#bcdae9'}}/>  <FaCode size={25} style={{ fill: '#bcdae9'}}/>
+                            <FaKeyboard size={25} style={{ fill: '#efe9e4'}}/>  <FaLaptop size={25} style={{ fill: '#efe9e4'}}/>  <FaCode size={25} style={{ fill: '#efe9e4'}}/>
                         </div>
                     </Card>
                 </div>
