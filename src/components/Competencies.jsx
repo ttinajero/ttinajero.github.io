@@ -19,58 +19,30 @@ const Competencies = () => {
     return (
         <Row>
             <Col span={24} >
+            <div style={{textAlign: 'left', padding: '30px 0px 0px 30px', fontSize:40, fontFamily: 'Ubuntu'}}>
+                    / Competencies
+            </div>
+            </Col>
+            <Col span={8}>
                 <div style={{textAlign: 'justify', padding: '30px 30px 0px 30px'}}>
-                    <Card title="Competencies" style={{ fontWeight: 'normal', fontSize:15 }}>
-                        <Row gutter={[8, 8]}>
-                            <Col span={3} align="middle"><FaLaptopCode style={iconLaptop} /></Col>
-                            <Col span={3} align="middle">Python</Col>
-                            <Col span={3} align="middle">Flask</Col>
-                            <Col span={3} align="middle">PHP</Col>
-                            <Col span={3} align="middle">ReactJS</Col>
-                            <Col span={3} align="middle">JQuery</Col>
-                            <Col span={3} align="middle">C#</Col>
-                            <Col span={3} align="middle"></Col>
-
-                            <Col span={3} align="middle"><FiDatabase  style={iconDB}/></Col>
-                            <Col span={3} align="middle">MySQL</Col>
-                            <Col span={3} align="middle">MongoDB</Col>
-                            <Col span={3} align="middle">Oracle</Col>
-                            <Col span={3} align="middle">MS-SQL</Col>
-                            <Col span={3} align="middle"></Col>
-                            <Col span={3} align="middle"></Col>
-                            <Col span={3} align="middle"></Col>
-                            
-                            <Col span={3} align="middle"><FaAws  style={iconAWS}/></Col>
-                            <Col span={3} align="middle">AWS EC2</Col>
-                            <Col span={3} align="middle">AWS API Gateway</Col>
-                            <Col span={3} align="middle">AWS DynamoDB</Col>
-                            <Col span={3} align="middle">AWS Transcribe</Col>
-                            <Col span={3} align="middle">AWS Comprehend</Col>
-                            <Col span={3} align="middle">AWS RDS</Col>
-                            <Col span={3} align="middle"></Col>
-
-                            <Col span={3} align="middle"><GiArtificialIntelligence  style={iconIA}/></Col>
-                            <Col span={3} align="middle">Jupyter Netbooks</Col>
-                            <Col span={3} align="middle">OpenCV</Col>
-                            <Col span={3} align="middle">Pandas</Col>
-                            <Col span={3} align="middle">Scikit-learn</Col>
-                            <Col span={3} align="middle"></Col>
-                            <Col span={3} align="middle"></Col>
-                            <Col span={3} align="middle"></Col>
-
-
-                            <Col span={3} align="middle"><AiOutlineDeploymentUnit  style={iconDeploy}/></Col>
-                            <Col span={3} align="middle">CI/CD</Col>
-                            <Col span={3} align="middle">UnitTest</Col>
-                            <Col span={3} align="middle">Grafana</Col>
-                            <Col span={3} align="middle">Highcharts JS</Col>
-                            <Col span={3} align="middle">Storybook</Col>
-                            <Col span={3} align="middle"></Col>
-                            <Col span={3} align="middle"></Col>
+                    <Card title="Programming languages & frameworks" style={{ width: 500, fontWeight: 'normal', fontSize:15 }}>
+                        <Row gutter={[16, 16]}>
+                            <Col span={12}>Python</Col>
+                            <Col span={12}>Flask</Col>
+                        </Row>
+                        <Row gutter={[16, 16]}>
+                            <Col span={12}>PHP</Col>
+                            <Col span={12}>ReactJS</Col>
+                        </Row>
+                        <Row gutter={[16, 16]}>
+                            <Col span={12}>JQuery</Col>
+                            <Col span={12}>C#</Col>
                         </Row>
                     </Card>
                 </div>
+                
             </Col>
+            
         </Row>
     )
 }
