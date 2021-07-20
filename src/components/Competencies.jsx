@@ -40,7 +40,7 @@ const Competencies = () => {
         {
             title: <AiOutlineDeploymentUnit style={iconDeploy}/>,
             subtitle: 'Others',
-            objects:['CI/CD','UnitTest','Grafana','Highcharts JS','Storybook','','']
+            objects:['CI/CD','UnitTest','Grafana','Highcharts JS','Storybook','API Rest','']
         },
       ];
 
