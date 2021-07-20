@@ -1,69 +1,80 @@
 import React from 'react'
 import { Card } from 'antd'
-import { Row, Col } from 'antd';
+import { Row, Col, List } from 'antd';
 import { FaLaptopCode, FaAws } from 'react-icons/fa';
 import { FiDatabase } from 'react-icons/fi';
 import { GiArtificialIntelligence } from 'react-icons/gi';
 import { AiOutlineDeploymentUnit } from 'react-icons/ai';
 
-
+const { Meta } = Card;
 
 const Competencies = () => {
+
+    const iconLaptop = { color: "#264653", fontSize: "3em" };
+    const iconDB = { color: "#2a9d8f", fontSize: "3em" };
+    const iconAWS = { color: "#f4a261", fontSize: "3em" };
+    const iconIA = { color: "#e9c46a", fontSize: "3em" };
+    const iconDeploy = { color: "#e76f51", fontSize: "3em" };
+
+
+
+    const data = [
+        {
+            title: <FaLaptopCode style={iconLaptop} />,
+            subtitle: 'Programming Languages',
+            objects:['Python','Flask','PHP','ReactJS','C#','','']
+        },
+        {
+            title: <FiDatabase style={iconDB} />,
+            subtitle: 'Databases',
+            objects:['MySQL','MongoDB','DynamoDB','MS-SQL','Oracle','','']
+        },
+        {
+            title: <FaAws style={iconAWS} />,
+            subtitle: 'Amazon Web Services',
+            objects:['AWS EC2','AWS API Gateway','AWS DynamoDB','AWS Transcribe','AWS Comprehend','AWS RDS','AWS Lambda']
+        },
+        {
+            title: <GiArtificialIntelligence style={iconIA}/>,
+            subtitle: 'Artificial Intelligence',
+            objects:['Jupyter Netbooks','OpenCV','Pandas','Scikit-learn','','','']
+        },
+        {
+            title: <AiOutlineDeploymentUnit style={iconDeploy}/>,
+            subtitle: 'Others',
+            objects:['CI/CD','UnitTest','Grafana','Highcharts JS','Storybook','','']
+        },
+      ];
+
     return (
         <Row>
             <Col span={24} >
-                <div style={{textAlign: 'justify', padding: '30px 30px 0px 30px'}}>
-                    <Card title="Competencies" style={{ fontWeight: 'normal', fontSize:15 }}>
-                        <Row gutter={[8, 8]}>
-                            <Col span={3} align="middle"><FaLaptopCode  size={25}/></Col>
-                            <Col span={3}>Python</Col>
-                            <Col span={3}>Flask</Col>
-                            <Col span={3}>PHP</Col>
-                            <Col span={3}>ReactJS</Col>
-                            <Col span={3}>JQuery</Col>
-                            <Col span={3}>C#</Col>
-                            <Col span={3}></Col>
-
-                            <Col span={3} align="middle"><FiDatabase  size={25}/></Col>
-                            <Col span={3}>MySQL</Col>
-                            <Col span={3}>MongoDB</Col>
-                            <Col span={3}>Oracle</Col>
-                            <Col span={3}>MS-SQL</Col>
-                            <Col span={3}></Col>
-                            <Col span={3}></Col>
-                            <Col span={3}></Col>
-                            
-                            <Col span={3} align="middle"><FaAws  size={25}/></Col>
-                            <Col span={3}>AWS EC2</Col>
-                            <Col span={3}>AWS API Gateway</Col>
-                            <Col span={3}>AWS DynamoDB</Col>
-                            <Col span={3}>AWS Transcribe</Col>
-                            <Col span={3}>AWS Comprehend</Col>
-                            <Col span={3}>AWS RDS</Col>
-                            <Col span={3}></Col>
-
-                            <Col span={3} align="middle"><GiArtificialIntelligence  size={25}/></Col>
-                            <Col span={3}>Jupyter Netbooks</Col>
-                            <Col span={3}>OpenCV</Col>
-                            <Col span={3}>Pandas</Col>
-                            <Col span={3}>Scikit-learn</Col>
-                            <Col span={3}></Col>
-                            <Col span={3}></Col>
-                            <Col span={3}></Col>
-
-
-                            <Col span={3} align="middle"><AiOutlineDeploymentUnit  size={25}/></Col>
-                            <Col span={3}>CI/CD</Col>
-                            <Col span={3}>UnitTest</Col>
-                            <Col span={3}>Grafana</Col>
-                            <Col span={3}>Highcharts JS</Col>
-                            <Col span={3}>Storybook</Col>
-                            <Col span={3}></Col>
-                            <Col span={3}></Col>
-                        </Row>
-                    </Card>
+            <div style={{textAlign: 'left', padding: '30px 0px 0px 30px', fontSize:40, fontFamily: 'Ubuntu'}}>
+                    / Competencies
+            </div>
+            </Col>
+            <Col span={24} >
+                <div style={{padding: '30px 30px 0px 30px'}}>
+                    <List grid={{
+                            gutter: 24,
+                            xs: 1,
+                            sm: 2,
+                            md: 3,
+                            lg: 5,
+                            xl: 5,
+                        }}
+                        dataSource={data}
+                        renderItem={item => (
+                        <List.Item>
+                            <Card title={<Meta title={item.title} description={item.subtitle} />}>
+                            { item["objects"].map((item,i) => <h3>{item}</h3>)}
+                            </Card>
+                        </List.Item>
+                        )}
+                    />
                 </div>
             </Col>
+            
         </Row>
     )
 }
