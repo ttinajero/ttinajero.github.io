@@ -16,8 +16,6 @@ const Competencies = () => {
     const iconIA = { color: "#e9c46a", fontSize: "3em" };
     const iconDeploy = { color: "#e76f51", fontSize: "3em" };
 
-
-
     const data = [
         {
             title: <FaLaptopCode style={iconLaptop} />,
@@ -74,7 +72,6 @@ const Competencies = () => {
                     />
                 </div>
             </Col>
-            
         </Row>
     )
 }
