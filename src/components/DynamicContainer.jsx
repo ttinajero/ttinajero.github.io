@@ -9,7 +9,7 @@ import LoadingBlock from './LoadingBlock'
 
 const DynamicContainer = ({estado, nombre}) => {
 
-    if (estado === "0") {
+    if (estado === false) {
         return <LoadingBlock />
     } else {
         console.log(nombre)
