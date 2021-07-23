@@ -2,9 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 
 import DynamicContainer from '../components/DynamicContainer';
-import LoadingText from '../components/LoadingText';
 import Title from '../components/Title';
-
 import Typing from 'react-typing-animation'
 import { Row, Col } from 'antd';
 
