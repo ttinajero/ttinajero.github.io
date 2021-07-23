@@ -7,7 +7,6 @@ const { Meta } = Card;
 const { Text } = Typography;
 
 const Experience = () => {
-
     
 
     const data = [
