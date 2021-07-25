@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react';
 
 import { Card } from 'antd'
 import { Row, Col, List } from 'antd';
@@ -12,8 +11,7 @@ const { Meta } = Card;
 
 const Competencies = (estado) => {
 
-    const [state, setState] = useState(estado)
-
+   
     const iconLaptop = { color: "#264653", fontSize: "3em" };
     const iconDB = { color: "#2a9d8f", fontSize: "3em" };
     const iconAWS = { color: "#f4a261", fontSize: "3em" };
@@ -68,7 +66,7 @@ const Competencies = (estado) => {
                         dataSource={data}
                         renderItem={item => (
                         <List.Item>
-                            <Card title={<Meta title={item.title} description={item.subtitle} />} loading={state}>
+                            <Card title={<Meta title={item.title} description={item.subtitle} />} loading={estado}>
                             { item["objects"].map((item,i) => <h3>{item}</h3>)}
                             </Card>
                         </List.Item>
