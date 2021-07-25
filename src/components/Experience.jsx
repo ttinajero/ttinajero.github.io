@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card, Avatar, Typography } from 'antd'
 import { Row, Col, List } from 'antd';
-import LoadingBlock from '../components/LoadingBlock'
 
 
 const { Meta } = Card;
