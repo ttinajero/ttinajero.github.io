@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react';
 
 import { Card } from 'antd'
 import { Row, Col, List } from 'antd';
@@ -10,9 +9,7 @@ import { AiOutlineDeploymentUnit } from 'react-icons/ai';
 
 const { Meta } = Card;
 
-const Competencies = (estado) => {
-
-    const [state, setState] = useState(estado)
+const Competencies = () => {
 
     const iconLaptop = { color: "#264653", fontSize: "3em" };
     const iconDB = { color: "#2a9d8f", fontSize: "3em" };
@@ -68,7 +65,7 @@ const Competencies = (estado) => {
                         dataSource={data}
                         renderItem={item => (
                         <List.Item>
-                            <Card title={<Meta title={item.title} description={item.subtitle} />} loading={state}>
+                            <Card title={<Meta title={item.title} description={item.subtitle} />}>
                             { item["objects"].map((item,i) => <h3>{item}</h3>)}
                             </Card>
                         </List.Item>

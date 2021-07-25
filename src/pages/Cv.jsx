@@ -1,16 +1,17 @@
 import React from 'react'
 import { useState } from 'react';
 
-import DynamicContainer from '../components/DynamicContainer';
 import Title from '../components/Title';
 import Typing from 'react-typing-animation'
 import { Row, Col } from 'antd';
+import Summary from '../components/Summary';
 
 
 const Cv = () => {
 
     const termino = () => {
         setState(!state)
+        console.log('Termino')
     }
     
     const [state, setState] = useState(false)
@@ -32,10 +33,7 @@ const Cv = () => {
                  </div>
             </Col>
         </Row>
-        <DynamicContainer estado={state} nombre="Summary" />
-        <DynamicContainer estado={state} nombre="Competencies" />
-        <DynamicContainer estado={state} nombre="Experience" />
-        <DynamicContainer estado={state} nombre="Education" />
+        <Summary estado={state} />
         </>
     )
 }
