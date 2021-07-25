@@ -9,8 +9,8 @@ import { AiOutlineDeploymentUnit } from 'react-icons/ai';
 
 const { Meta } = Card;
 
-const Competencies = (props) => {
 
+const Competencies = (props) => {
    
     const iconLaptop = { color: "#264653", fontSize: "3em" };
     const iconDB = { color: "#2a9d8f", fontSize: "3em" };

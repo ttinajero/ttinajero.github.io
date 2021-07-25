@@ -5,8 +5,10 @@ import Title from '../components/Title';
 import Typing from 'react-typing-animation'
 import { Row, Col } from 'antd';
 import Summary from '../components/Summary';
+
 import Competencies from '../components/Competencies'
 import Experience from '../components/Experience'
+
 
 
 const Cv = () => {
@@ -14,6 +16,7 @@ const Cv = () => {
     const [state, setstate] = useState(true)
 
     const termino = () => {
+
         setstate(!state)
     }
 

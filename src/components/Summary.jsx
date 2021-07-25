@@ -16,11 +16,11 @@ function Summary(props) {
                         <div style={{textAlign: 'center'}}>
                             <FaKeyboard size={25} style={{ fill: '#d3d3d3'}}/>  <FaLaptop size={25} style={{ fill: '#d3d3d3'}}/>  <FaCode size={25} style={{ fill: '#d3d3d3'}}/>
                         </div>
-                    </Card>
-                </div>
-            </Col>
-        </Row>
-    )
+                    </Col>
+                </Row>  
+            </>
+        )
 }
 
 export default Summary
+
