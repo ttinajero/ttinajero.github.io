@@ -9,8 +9,9 @@ import { AiOutlineDeploymentUnit } from 'react-icons/ai';
 
 const { Meta } = Card;
 
-const Competencies = () => {
 
+const Competencies = (props) => {
+   
     const iconLaptop = { color: "#264653", fontSize: "3em" };
     const iconDB = { color: "#2a9d8f", fontSize: "3em" };
     const iconAWS = { color: "#f4a261", fontSize: "3em" };
@@ -65,7 +66,7 @@ const Competencies = () => {
                         dataSource={data}
                         renderItem={item => (
                         <List.Item>
-                            <Card title={<Meta title={item.title} description={item.subtitle} />}>
+                            <Card title={<Meta title={item.title} description={item.subtitle} />} loading={props.estado}>
                             { item["objects"].map((item,i) => <h3>{item}</h3>)}
                             </Card>
                         </List.Item>

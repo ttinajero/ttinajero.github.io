@@ -1,22 +1,26 @@
 import React from 'react'
-import { useState } from 'react';
+import {useState} from 'react'
 
 import Title from '../components/Title';
 import Typing from 'react-typing-animation'
 import { Row, Col } from 'antd';
 import Summary from '../components/Summary';
 
+import Competencies from '../components/Competencies'
+import Experience from '../components/Experience'
+
+
 
 const Cv = () => {
 
-    const termino = () => {
-        setState(!state)
-        console.log('Termino')
-    }
-    
-    const [state, setState] = useState(false)
+    const [state, setstate] = useState(true)
 
-    return (
+    const termino = () => {
+
+        setstate(!state)
+    }
+
+   return (
         <>
         <Title />
         <Row>
@@ -34,6 +38,8 @@ const Cv = () => {
             </Col>
         </Row>
         <Summary estado={state} />
+        <Competencies estado={state} />
+        <Experience estado={state} />
         </>
     )
 }
