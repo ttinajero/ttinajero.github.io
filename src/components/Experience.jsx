@@ -1,14 +1,14 @@
 import React from 'react'
 import { Card, Avatar, Typography } from 'antd'
 import { Row, Col, List } from 'antd';
+import LoadingBlock from '../components/LoadingBlock'
 
 
 const { Meta } = Card;
 const { Text } = Typography;
 
-const Experience = () => {
+const Experience = (props) => {
 
-    
 
     const data = [
         {
@@ -100,44 +100,68 @@ const Experience = () => {
         },
       ];
 
-
-
-    return (
-        <Row>
-            <Col span={24} >
-            <div style={{textAlign: 'left', padding: '30px 0px 0px 30px', fontSize:40, fontFamily: 'Ubuntu'}}>
-                    / Experience
-            </div>
-            </Col>
-            <Col span={24} >
-                <div style={{textAlign: 'justify', padding: '30px 30px 0px 30px'}}>
-                <List grid={{
-                            gutter: 24,
-                            xs: 1,
-                            sm: 1,
-                            md: 1,
-                            lg: 1,
-                            xl: 1,
-                        }}
-                        dataSource={data}
-                        renderItem={item => (
-                        <List.Item>
-                            <Card title={
-                                <Meta
-                                    avatar={<Avatar src={item.avatar} />} 
-                                    title={item.company} 
-                                    description={item.job} />} 
-                                    extra={<Text code>{item.start} -- {item.end}</Text>}
-                                >
-                            { item["description"].map((item,i) => <div style={{padding: '0px 0px 0px 30px'}}><h3>{item}</h3></div>)}
-                            </Card>
-                        </List.Item>
-                        )}
-                    />
+      if(!props.estado) {
+        return (
+            <Row>
+                <Col span={24} >
+                <div style={{textAlign: 'left', padding: '30px 0px 0px 30px', fontSize:40, fontFamily: 'Ubuntu'}}>
+                        / Experience
                 </div>
-            </Col>
-        </Row>
-    )
+                </Col>
+                <Col span={24} >
+                    <div style={{textAlign: 'justify', padding: '30px 30px 0px 30px'}}>
+                    <List grid={{
+                                gutter: 24,
+                                xs: 1,
+                                sm: 1,
+                                md: 1,
+                                lg: 1,
+                                xl: 1,
+                            }}
+                            dataSource={data}
+                            renderItem={item => (
+                            <List.Item>
+                                <Card title={
+                                    <Meta
+                                        avatar={<Avatar src={item.avatar} />} 
+                                        title={item.company} 
+                                        description={item.job} />} 
+                                        extra={<Text code>{item.start} -- {item.end}</Text>}
+                                    loading={props.estado}>
+                                { item["description"].map((item,i) => <div style={{padding: '0px 0px 0px 30px'}}><h3>{item}</h3></div>)}
+                                </Card>
+                            </List.Item>
+                            )}
+                        />
+                    </div>
+                </Col>
+            </Row>
+        )
+      } else {
+        return (
+            <>
+                <Row>
+                    <Col span={24} >
+                        <div style={{textAlign: 'left', padding: '30px 0px 0px 30px', fontSize:40, fontFamily: 'Ubuntu'}}>
+                                / Experience
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span={24} >
+                        <div style={{textAlign: 'justify', padding: '30px 30px 0px 30px'}}>
+                            <Card title="Loading..." style={{ fontWeight: 'normal', fontSize:17 }} loading={props.estado}>
+                                
+                            </Card>
+                        </div>
+                    </Col>
+                </Row>
+            </>
+        )
+      }
+
+
+   
 }
 
 export default Experience

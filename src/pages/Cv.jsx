@@ -5,11 +5,17 @@ import Title from '../components/Title';
 import Typing from 'react-typing-animation'
 import { Row, Col } from 'antd';
 import Summary from '../components/Summary';
+import Competencies from '../components/Competencies'
+import Experience from '../components/Experience'
 
 
 const Cv = () => {
 
-    const [estado, setestado] = useState(false)
+    const [state, setstate] = useState(true)
+
+    const termino = () => {
+        setstate(!state)
+    }
 
    return (
         <>
@@ -17,7 +23,7 @@ const Cv = () => {
         <Row>
             <Col span={24}>
                 <div style={{textAlign: 'left', padding: '0px 0px 0px 40px', fontSize:20, fontFamily: 'Ubuntu'}}>
-                    <Typing speed={50}>
+                    <Typing speed={50} onFinishedTyping={termino}>
                         <span>Cargando competencias...</span>
                         <Typing.Reset count={1} delay={500} />
                         <span>Cargando experiencia laboral...</span>
@@ -28,7 +34,9 @@ const Cv = () => {
                  </div>
             </Col>
         </Row>
-        <Summary estado={estado} />
+        <Summary estado={state} />
+        <Competencies estado={state} />
+        <Experience estado={state} />
         </>
     )
 }
