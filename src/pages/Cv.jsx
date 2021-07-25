@@ -1,27 +1,23 @@
 import React from 'react'
-import { useState } from 'react';
+import {useState} from 'react'
 
-import DynamicContainer from '../components/DynamicContainer';
 import Title from '../components/Title';
 import Typing from 'react-typing-animation'
 import { Row, Col } from 'antd';
+import Summary from '../components/Summary';
 
 
 const Cv = () => {
 
-    const termino = () => {
-        setState(!state)
-    }
-    
-    const [state, setState] = useState(false)
+    const [estado, setestado] = useState(false)
 
-    return (
+   return (
         <>
         <Title />
         <Row>
             <Col span={24}>
                 <div style={{textAlign: 'left', padding: '0px 0px 0px 40px', fontSize:20, fontFamily: 'Ubuntu'}}>
-                    <Typing speed={50} onFinishedTyping={termino}>
+                    <Typing speed={50}>
                         <span>Cargando competencias...</span>
                         <Typing.Reset count={1} delay={500} />
                         <span>Cargando experiencia laboral...</span>
@@ -32,10 +28,7 @@ const Cv = () => {
                  </div>
             </Col>
         </Row>
-        <DynamicContainer estado={state} nombre="Summary" />
-        <DynamicContainer estado={state} nombre="Competencies" />
-        <DynamicContainer estado={state} nombre="Experience" />
-        <DynamicContainer estado={state} nombre="Education" />
+        <Summary estado={estado} />
         </>
     )
 }
