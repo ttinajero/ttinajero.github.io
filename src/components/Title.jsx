@@ -2,7 +2,6 @@ import React from 'react'
 import { Row, Col, Typography } from 'antd';
 import { FaGithub } from 'react-icons/fa';
 
-import logo from '../icon_otg.png';
 import logo2 from '../cv_pic_trans.png';
 
 const { Link } = Typography;
