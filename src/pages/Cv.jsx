@@ -27,11 +27,11 @@ const Cv = () => {
             <Col span={24}>
                 <div style={{textAlign: 'left', padding: '0px 0px 0px 40px', fontSize:20, fontFamily: 'Ubuntu'}}>
                     <Typing speed={50} onFinishedTyping={termino}>
-                        <span>Cargando competencias...</span>
+                        <span>Loading skills...</span>
                         <Typing.Reset count={1} delay={500} />
-                        <span>Cargando experiencia laboral...</span>
+                        <span>Loading work experience...</span>
                         <Typing.Reset count={1} delay={500} />
-                        <span>Cargando educación...</span>
+                        <span>Loading education</span>
                         <Typing.Reset count={1} delay={500} />
                     </Typing>
                  </div>
