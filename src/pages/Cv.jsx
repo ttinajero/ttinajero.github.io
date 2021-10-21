@@ -16,7 +16,6 @@ const Cv = () => {
     const [state, setstate] = useState(true)
 
     const termino = () => {
-
         setstate(!state)
     }
 
